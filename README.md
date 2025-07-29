@@ -41,39 +41,7 @@ README.md
    - Future: `/search?bbox=` for spatial queries
 
    ## 📁 Project Structure
-   ├── seismic-gis-light-backend
-│   ├── pom.xml
-│   └── src
-│       └── main
-│           ├── java
-│           │   └── com.example.seismicgis
-│           │       ├── SeismicGisApplication.java
-│           │       ├── controller
-│           │       │   └── EarthquakeController.java
-│           │       ├── entity
-│           │       │   └── Earthquake.java
-│           │       ├── repository
-│           │       │   └── EarthquakeRepository.java
-│           │       ├── service
-│           │       │   └── EarthquakeService.java
-│           │       └── task
-│           │           └── EarthquakeFetchTask.java
-│           └── resources
-│               ├── application.yml
-│               └── schema.sql
-│
-├── seismic-gis-light-frontend
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── public/
-│   │   └── earthquake-icon.png
-│   └── src/
-│       ├── App.vue
-│       ├── main.js
-│       └── components/
-│           ├── EarthquakeMap.vue
-│           └── EarthquakeSidebar.vue
+   - see project folder respectively
 
    ## 🌏 Data Source
    - API: [https://api.wolfx.jp/cenc_eqlist.json](https://api.wolfx.jp/cenc_eqlist.json)
