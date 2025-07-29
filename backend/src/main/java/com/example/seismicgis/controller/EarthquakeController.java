@@ -1,20 +1,25 @@
-package com.example.seismicgis.entity;
+// === EarthquakeController.java ===
+package com.example.seismicgis.controller;
 
-import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import com.example.seismicgis.entity.Earthquake;
+import com.example.seismicgis.service.EarthquakeService;
+import org.springframework.web.bind.annotation.*;
 
-@Entity
-public class Earthquake {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+import java.util.List;
 
-    private double latitude;
-    private double longitude;
-    private double magnitude;
-    private double depth;
-    private String location;
-    private LocalDateTime timestamp;
+@RestController
+@RequestMapping("/api/earthquakes")
+@CrossOrigin(origins = "*")
+public class EarthquakeController {
 
-    // Getters and setters omitted for brevity
+    private final EarthquakeService service;
+
+    public EarthquakeController(EarthquakeService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Earthquake> getAll() {
+        return service.getAll();
+    }
 }
