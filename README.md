@@ -41,7 +41,39 @@ README.md
    - Future: `/search?bbox=` for spatial queries
 
    ## 📁 Project Structure
-   See `backend/` and `frontend/` folders respectively.
+   ├── seismic-gis-light-backend
+│   ├── pom.xml
+│   └── src
+│       └── main
+│           ├── java
+│           │   └── com.example.seismicgis
+│           │       ├── SeismicGisApplication.java
+│           │       ├── controller
+│           │       │   └── EarthquakeController.java
+│           │       ├── entity
+│           │       │   └── Earthquake.java
+│           │       ├── repository
+│           │       │   └── EarthquakeRepository.java
+│           │       ├── service
+│           │       │   └── EarthquakeService.java
+│           │       └── task
+│           │           └── EarthquakeFetchTask.java
+│           └── resources
+│               ├── application.yml
+│               └── schema.sql
+│
+├── seismic-gis-light-frontend
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── public/
+│   │   └── earthquake-icon.png
+│   └── src/
+│       ├── App.vue
+│       ├── main.js
+│       └── components/
+│           ├── EarthquakeMap.vue
+│           └── EarthquakeSidebar.vue
 
    ## 🌏 Data Source
    - API: [https://api.wolfx.jp/cenc_eqlist.json](https://api.wolfx.jp/cenc_eqlist.json)
@@ -53,3 +85,81 @@ README.md
 
    ## 📄 License
    MIT License — Free to use for portfolio, demo, and non-commercial mapping applications.
+
+## 📦 Frontend Deployment Instructions
+
+### 📁 Project Structure
+```
+seismic-gis-light-frontend/
+├── index.html
+├── package.json
+├── vite.config.js
+├── public/
+│   └── earthquake-icon.png
+└── src/
+    ├── App.vue
+    ├── main.js
+    └── components/
+        ├── EarthquakeMap.vue
+        └── EarthquakeSidebar.vue
+```
+
+---
+
+### 🚀 Local Development Setup
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start development server:
+```bash
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+Note: The `/api` routes are proxied to `localhost:8080` backend using `vite.config.js`
+
+---
+
+### 🌐 GitHub Pages Deployment (Static Hosting)
+
+1. Edit `vite.config.js` to include:
+```js
+base: './'
+```
+
+2. Build project:
+```bash
+npm run build
+```
+
+3. Upload contents of `dist/` to GitHub Pages (via `gh-pages` branch or `/docs` folder).
+
+---
+
+### 🌍 Deploy via Netlify or Vercel
+
+1. Connect your GitHub repo to [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/)
+2. Set build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+
+3. Done — you get a shareable link to your map app.
+
+---
+
+### ⚙️ Backend API Notes
+Ensure Spring Boot backend is running at `http://localhost:8080`. If not:
+- Deploy backend separately (e.g., via Docker, local JVM)
+- Update proxy in `vite.config.js`:
+```js
+proxy: {
+  '/api': {
+    target: 'http://<your-domain-or-ip>:8080'
+  }
+}
+```
+
+If you need help deploying the backend, see `/seismic-gis-light-backend` folder or contact the project maintainer.
