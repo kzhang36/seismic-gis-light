@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.7633, -41.2924]  // 示例: 新西兰惠灵顿附近
+      },
+      "properties": {
+        "mag": 5.1,
+        "depth": 10.0
+      }
+    }
+  ]
+}
