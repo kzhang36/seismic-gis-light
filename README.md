@@ -1,5 +1,3 @@
-README.md
-
    # Seismic GIS Light
 
    A lightweight, full-stack geospatial application for visualizing recent earthquake data in real time. Built with a Vue.js + Leaflet frontend and a Spring Boot + PostgreSQL/PostGIS backend. Designed as a portfolio-ready demo and LINZ-compatible mapping utility.
