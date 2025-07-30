@@ -26,18 +26,20 @@ seismic-hydro-analysis/
 │   └── flood_path.geojson         # Output: derived hydrological flowpaths
 ├── run_hydro_analysis.py          # Main script
 └── requirements.txt
+
 ##🚀 How to Run
 ```bash
 python run_hydro_analysis.py
 
 Make sure the following inputs are available:
-
+```bash
 dem/sample_dem.tif: Small-scale DEM raster
 
-earthquakes/latest_quake.geojson: At least one recent quake point
+earthquakes/latest_quake.geojson:
+At least one recent quake point
 
 Result will be exported to:
-
+```bash
 output/flood_path.geojson — compatible with Leaflet display
 
 ##🌍 Integration Options
