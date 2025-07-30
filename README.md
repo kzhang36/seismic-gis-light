@@ -15,6 +15,13 @@
    - Database: PostgreSQL + PostGIS
    - Build Tools: Maven, npm
 
+### Roadmap
+- [x] Backend: Spring Boot with RESTful API
+- [x] Frontend: Vue + Leaflet Interactive Mapping
+- [ ] Phase 2 (Planned): Integrate AI/ML modules for:
+  - Seismic anomaly detection (GeoAI)
+  - Hydrologic hazard prediction (Rainfall + terrain models)
+
    ## 🚀 Quick Start
 
    ### Backend Setup
