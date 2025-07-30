@@ -18,7 +18,7 @@ onMounted(async () => {
 })
   .addTo(map)
   .loadURL('/output/flood_path.geojson')  // 你需配置静态路径(!you need to set up your own static path!)
-
+ 
   const res = await fetch('http://localhost:8080/api/earthquakes');
   const earthquakes = await res.json();
 
