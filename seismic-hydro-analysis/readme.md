@@ -12,7 +12,6 @@ This is an experimental extension of the **Seismic GIS Light** project. It integ
 
 ## 🛠️ Dependencies
 
-```bash
 pip install -r requirements.txt
 
 
